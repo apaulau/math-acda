@@ -1,0 +1,182 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5834,        173]
+NotebookOptionsPosition[      5523,        159]
+NotebookOutlinePosition[      5934,        175]
+CellTagsIndexPosition[      5891,        172]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f1", "[", 
+   RowBox[{"y1_", ",", "y2_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"k", " ", "y1"}], "-", 
+   RowBox[{"a", " ", "y1", " ", "y2"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f2", "[", 
+    RowBox[{"y1_", ",", "y2_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "l"}], " ", "y2"}], " ", "+", 
+    RowBox[{"b", " ", "y1", " ", "y2"}]}]}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";", 
+  RowBox[{"l", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", "1"}], ";", 
+  RowBox[{"b", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vp", "=", 
+   RowBox[{"VectorPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f1", "[", 
+        RowBox[{"y1", ",", "y2"}], "]"}], ",", 
+       RowBox[{"f2", "[", 
+        RowBox[{"y1", ",", "y2"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y1", ",", "0", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y2", ",", "0", ",", "3"}], "}"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"VectorStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Gray", ",", 
+        RowBox[{"Arrowheads", "@", "0.01"}]}], "}"}]}], "\[IndentingNewLine]",
+      ",", 
+     RowBox[{"VectorScale", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.015", ",", "Automatic", ",", "None"}], "}"}]}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"Frame", "\[Rule]", "None"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"Axes", "\[Rule]", "True"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"VectorPoints", "\[Rule]", "40"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], "\[IndentingNewLine]", 
+     ",", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"y10", ",", "y20"}], "}"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"0.2", ",", "1"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tmax", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sol", "=", 
+   RowBox[{
+    RowBox[{"NDSolve", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"y1", "'"}], "[", "t", "]"}], "\[Equal]", 
+         RowBox[{"f1", "[", 
+          RowBox[{
+           RowBox[{"y1", "[", "t", "]"}], ",", 
+           RowBox[{"y2", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+        ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"y2", "'"}], "[", "t", "]"}], "\[Equal]", 
+         RowBox[{"f2", "[", 
+          RowBox[{
+           RowBox[{"y1", "[", "t", "]"}], ",", 
+           RowBox[{"y2", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+        ",", 
+        RowBox[{
+         RowBox[{"y1", "[", "0", "]"}], "\[Equal]", "y10"}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{
+         RowBox[{"y2", "[", "0", "]"}], "\[Equal]", "y20"}]}], 
+       "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"{", 
+       RowBox[{"y1", ",", "y2"}], "}"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "tmax"}], "}"}]}], "]"}], 
+    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ContourPlot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"b", " ", "y"}], " ", "-", " ", 
+       RowBox[{"l", " ", 
+        RowBox[{"Log", "[", "y", "]"}]}]}], ")"}], "+", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"a", " ", "y2"}], "-", 
+       RowBox[{"k", " ", 
+        RowBox[{"Log", "[", "y2", "]"}]}]}], ")"}]}], "\[IndentingNewLine]", 
+    ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "0", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y2", ",", "0", ",", "5"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sp", "=", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"y1", "[", "t", "]"}], ",", 
+        RowBox[{"y2", "[", "t", "]"}]}], "}"}], "/.", "sol"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Thick"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"{", 
+   RowBox[{"vp", ",", "sp"}], "}"}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6530453886528425`*^9, 3.6530455414451895`*^9}, {
+  3.6530470806762033`*^9, 3.6530472236483994`*^9}, {3.6530475186404305`*^9, 
+  3.6530475218204794`*^9}, {3.653047686395507*^9, 3.6530476864430075`*^9}, {
+  3.6530477607541494`*^9, 3.6530478343027787`*^9}, {3.6530484623639297`*^9, 
+  3.6530484637289505`*^9}}]
+},
+WindowSize->{1920, 1058},
+WindowMargins->{{0, Automatic}, {2, Automatic}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 6, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 4962, 137, 836, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

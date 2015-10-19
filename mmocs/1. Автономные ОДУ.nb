@@ -1,0 +1,190 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7000,        181]
+NotebookOptionsPosition[      6616,        164]
+NotebookOutlinePosition[      7026,        180]
+CellTagsIndexPosition[      6983,        177]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tmax", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"getsol", "[", 
+    RowBox[{"y0_", ",", "c_"}], "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"y", "/.", 
+      RowBox[{"NDSolve", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"y", "'"}], "[", "t", "]"}], "\[Equal]", 
+           RowBox[{"f", "[", 
+            RowBox[{
+             RowBox[{"y", "[", "t", "]"}], ",", "c"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"y", "[", "0", "]"}], "\[Equal]", "y0"}]}], "}"}], ",", 
+        RowBox[{"{", "y", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "tmax"}], "}"}]}], "]"}]}], "//", 
+     "Last"}], ")"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"y_", ",", "p_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "-", "y"}], ")"}], "y"}], "-", 
+   RowBox[{"p", " ", "y"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", ".5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Show", "@", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"VectorPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", 
+          RowBox[{"f", "[", 
+           RowBox[{"y", ",", "p"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "7"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", 
+          RowBox[{"-", "1"}], ",", "3"}], "}"}], "\[IndentingNewLine]", ",", 
+        RowBox[{"VectorStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"Gray", ",", 
+           RowBox[{"Arrowheads", "@", "0"}]}], "}"}]}], "\[IndentingNewLine]",
+         ",", 
+        RowBox[{"VectorScale", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0.025", ",", "Automatic", ",", "None"}], "}"}]}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{"Frame", "\[Rule]", "None"}], "\[IndentingNewLine]", ",", 
+        RowBox[{"Axes", "\[Rule]", "True"}], "\[IndentingNewLine]", ",", 
+        RowBox[{"VectorPoints", "\[Rule]", "30"}], "\[IndentingNewLine]", ",", 
+        RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{"ImageSize", "\[Rule]", "500"}]}], "\[IndentingNewLine]", 
+       "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"Evaluate", "[", 
+         RowBox[{
+          RowBox[{"getsol", "[", 
+           RowBox[{"y0", ",", "p"}], "]"}], "[", "t", "]"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], "\[IndentingNewLine]", 
+        ",", 
+        RowBox[{"PlotStyle", "\[Rule]", "Thick"}], "\[IndentingNewLine]", ",", 
+        RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], 
+     "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", "0", ",", "2"}], "}"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"y0", ",", "0", ",", "3"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6524421126434975`*^9, 3.6524422789037304`*^9}, {
+  3.652442327343798*^9, 3.6524424601839843`*^9}, {3.6524424902140265`*^9, 
+  3.6524424989540386`*^9}, {3.652442888464584*^9, 3.652442948544668*^9}, {
+  3.65244300027474*^9, 3.6524430014047422`*^9}, {3.6524430747048445`*^9, 
+  3.652443077664849*^9}, {3.652443160214964*^9, 3.6524431606549644`*^9}, {
+  3.652443452835374*^9, 3.6524434653653917`*^9}, {3.6524438345659084`*^9, 
+  3.6524438461859245`*^9}, {3.652444088896264*^9, 3.652444094066272*^9}, {
+  3.6524454366457367`*^9, 3.6524454508044643`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`p$$ = 0.176, $CellContext`y0$$ = 1.105, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`p$$], 0, 2}, {
+      Hold[$CellContext`y0$$], 0, 3}}, Typeset`size$$ = {500., {141., 146.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`p$2551$$ = 0, $CellContext`y0$2552$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`p$$ = 0, $CellContext`y0$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`p$$, $CellContext`p$2551$$, 0], 
+        Hold[$CellContext`y0$$, $CellContext`y0$2552$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[{
+         VectorPlot[{1, 
+           $CellContext`f[$CellContext`y, $CellContext`p$$]}, {$CellContext`t,
+            0, 7}, {$CellContext`y, -1, 3}, VectorStyle -> {Gray, 
+            Arrowheads[0]}, VectorScale -> {0.025, Automatic, None}, Frame -> 
+          None, Axes -> True, VectorPoints -> 30, AspectRatio -> Automatic, 
+          ImageSize -> 500], 
+         Plot[
+          Evaluate[
+           $CellContext`getsol[$CellContext`y0$$, \
+$CellContext`p$$][$CellContext`t]], {$CellContext`t, 0, $CellContext`tmax}, 
+          PlotStyle -> Thick, PlotRange -> All]}], 
+      "Specifications" :> {{$CellContext`p$$, 0, 2}, {$CellContext`y0$$, 0, 
+         3}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{547., {198., 205.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6524454525205526`*^9}]
+}, Open  ]]
+},
+WindowSize->{958, 1058},
+WindowMargins->{{0, Automatic}, {2, Automatic}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 6, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 3762, 92, 586, "Input"],
+Cell[4344, 116, 2256, 45, 420, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

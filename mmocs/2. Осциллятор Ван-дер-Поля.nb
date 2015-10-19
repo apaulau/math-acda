@@ -1,0 +1,274 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9923,        265]
+NotebookOptionsPosition[      9352,        244]
+NotebookOutlinePosition[      9792,        261]
+CellTagsIndexPosition[      9749,        258]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f1", "[", 
+   RowBox[{"y1_", ",", "y2_"}], "]"}], ":=", " ", 
+  "y2"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f2", "[", 
+    RowBox[{"y1_", ",", "y2_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["y1", "2"]}], ")"}], "y2"}], "-", "y1"}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"y10", ",", "y20"}], "}"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"aa", ",", "0"}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6530453886528425`*^9, 3.6530455414451895`*^9}, {
+   3.6530470806762033`*^9, 3.6530472236483994`*^9}, {3.6530475186404305`*^9, 
+   3.6530475218204794`*^9}, {3.653047686395507*^9, 3.6530476864430075`*^9}, {
+   3.6530477607541494`*^9, 3.6530478343027787`*^9}, {3.6530484623639297`*^9, 
+   3.6530484637289505`*^9}, {3.6530485955234747`*^9, 3.653048633556559*^9}, {
+   3.6530486881448975`*^9, 3.6530487230304337`*^9}, 3.653048771711181*^9, {
+   3.653048815201849*^9, 3.653048818191895*^9}, {3.653051313775572*^9, 
+   3.6530513319036083`*^9}, {3.653051406950901*^9, 3.6530514472472057`*^9}, {
+   3.653051499983222*^9, 3.653051500382245*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f1", "[", 
+   RowBox[{"y1_", ",", "y2_"}], "]"}], ":=", " ", 
+  RowBox[{"y2", 
+   RowBox[{"(", 
+    RowBox[{"aa", "-", "y1"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f2", "[", 
+    RowBox[{"y1_", ",", "y2_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SuperscriptBox["y1", "2"]}], ")"}], "y2"}], "-", "y1"}], ")"}], 
+    RowBox[{"(", 
+     RowBox[{"aa", "-", "y1"}], ")"}]}]}], " "}], "\[IndentingNewLine]", 
+ RowBox[{"aa", "=", "2.00861986087484313650940188"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"y10", ",", "y20"}], "}"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0"}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6530453886528425`*^9, 3.6530455414451895`*^9}, {
+   3.6530470806762033`*^9, 3.6530472236483994`*^9}, {3.6530475186404305`*^9, 
+   3.6530475218204794`*^9}, {3.653047686395507*^9, 3.6530476864430075`*^9}, {
+   3.6530477607541494`*^9, 3.6530478343027787`*^9}, {3.6530484623639297`*^9, 
+   3.6530484637289505`*^9}, {3.6530485955234747`*^9, 3.653048633556559*^9}, {
+   3.6530486881448975`*^9, 3.6530487230304337`*^9}, 3.653048771711181*^9, {
+   3.653048815201849*^9, 3.653048818191895*^9}, {3.653051313775572*^9, 
+   3.6530513319036083`*^9}, {3.653051406950901*^9, 3.6530514694194736`*^9}, 
+   3.653051585245099*^9}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.6530514183815546`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vp", "=", 
+   RowBox[{"VectorPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f1", "[", 
+        RowBox[{"y1", ",", "y2"}], "]"}], ",", 
+       RowBox[{"f2", "[", 
+        RowBox[{"y1", ",", "y2"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y1", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y2", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"VectorStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Gray", ",", 
+        RowBox[{"Arrowheads", "@", "0.01"}]}], "}"}]}], "\[IndentingNewLine]",
+      ",", 
+     RowBox[{"VectorScale", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.015", ",", "Automatic", ",", "None"}], "}"}]}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"Frame", "\[Rule]", "None"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"Axes", "\[Rule]", "True"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"VectorPoints", "\[Rule]", "40"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], "\[IndentingNewLine]", 
+     ",", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tmax", "=", "100000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol", "=", 
+    RowBox[{
+     RowBox[{"NDSolve", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"y1", "'"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{"f1", "[", 
+           RowBox[{
+            RowBox[{"y1", "[", "t", "]"}], ",", 
+            RowBox[{"y2", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+         ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"y2", "'"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{"f2", "[", 
+           RowBox[{
+            RowBox[{"y1", "[", "t", "]"}], ",", 
+            RowBox[{"y2", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+         ",", 
+         RowBox[{
+          RowBox[{"y1", "[", "0", "]"}], "\[Equal]", "y10"}], 
+         "\[IndentingNewLine]", ",", 
+         RowBox[{
+          RowBox[{"y2", "[", "0", "]"}], "\[Equal]", "y20"}]}], 
+        "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"y1", ",", "y2"}], "}"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], "\[IndentingNewLine]", 
+       ",", 
+       RowBox[{"PrecisionGoal", "\[Rule]", "20"}]}], "\[IndentingNewLine]", 
+      "]"}], "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ap", "=", 
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      FractionBox["y", 
+       RowBox[{"1", "-", 
+        SuperscriptBox["y", "2"]}]], "\[IndentingNewLine]", ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"Exclusions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "\[IndentingNewLine]", ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"Thick", ",", "Gray"}], "}"}]}], "\[IndentingNewLine]", ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "5"}], ",", "5"}], "}"}]}]}], "\[IndentingNewLine]", 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sp", "=", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"y1", "[", "t", "]"}], ",", 
+        RowBox[{"y2", "[", "t", "]"}]}], "}"}], "/.", "sol"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "4000"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Thick"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"{", 
+   RowBox[{"vp", ",", "ap", ",", "sp"}], "}"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6530453886528425`*^9, 3.6530455414451895`*^9}, {
+   3.6530470806762033`*^9, 3.6530472236483994`*^9}, {3.6530475186404305`*^9, 
+   3.6530475218204794`*^9}, {3.653047686395507*^9, 3.6530476864430075`*^9}, {
+   3.6530477607541494`*^9, 3.6530478343027787`*^9}, {3.6530484623639297`*^9, 
+   3.6530484637289505`*^9}, {3.6530485955234747`*^9, 3.653048633556559*^9}, {
+   3.6530486881448975`*^9, 3.6530487230304337`*^9}, 3.653048771711181*^9, {
+   3.653048815201849*^9, 3.653048818191895*^9}, {3.653051313775572*^9, 
+   3.6530513319036083`*^9}, {3.653051406950901*^9, 3.6530514169074707`*^9}, {
+   3.653051542222638*^9, 3.6530515424156494`*^9}, {3.65305164873073*^9, 
+   3.6530516692399035`*^9}, {3.653051744659217*^9, 3.6530517500075226`*^9}, {
+   3.6530518045126405`*^9, 3.6530518133941483`*^9}, {3.653051861307889*^9, 
+   3.653051869881379*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.65305156550097*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6530484943319206`*^9, 3.653048546510222*^9}, {
+  3.653048587198347*^9, 3.6530485874858513`*^9}, {3.6530486695296116`*^9, 
+  3.653048685494857*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"y1", "[", "t", "]"}], ",", 
+       RowBox[{"y2", "[", "t", "]"}]}], "}"}], "/.", "sol"}], "]"}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"PlotPoints", "\[Rule]", "400"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"PlotStyle", "\[Rule]", "Thick"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6530515227985272`*^9, 3.653051535000225*^9}, {
+  3.653051767547526*^9, 3.6530517767930546`*^9}}]
+},
+WindowSize->{946, 673},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1207, 29, 101, "Input"],
+Cell[1767, 51, 1430, 35, 128, "Input"],
+Cell[3200, 88, 89, 1, 71, "Input"],
+Cell[3292, 91, 5143, 126, 976, "Input"],
+Cell[8438, 219, 86, 1, 71, "Input"],
+Cell[8527, 222, 196, 3, 43, "Input"],
+Cell[8726, 227, 622, 15, 125, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
